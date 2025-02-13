@@ -18,7 +18,7 @@ jobs:
 
       - name: Create Jira issue
         id: create_jira_issue
-        uses: atlassian/gajira-create@v3.0.1
+        uses: atlassian/gajira-create@v3
         with:
           project: DOCS
           issuetype: Bug
@@ -28,7 +28,7 @@ jobs:
             ${{ github.event.issue.body }}
             ----
             {panel}
-            [Github permalink|${{ github.event.issue.html_url }}]
+            [GitHub permalink|${{ github.event.issue.html_url }}]
             {panel}
           fields: '{"customfield_10009": "DOCS-162", "labels": ["Quality"]}'
 
